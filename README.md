@@ -1,3 +1,3 @@
 # sxystudio
 portfolio
-sxystud.io
+http://sxystud.io
