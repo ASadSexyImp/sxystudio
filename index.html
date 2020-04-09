@@ -7,29 +7,22 @@
   <link rel="stylesheet" href="style.css" />
   <script src="style.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"></script>
-  <script>
-    $(function () {
-
-      var j_screen = $(
-        "<div class='rotage_alert' style='position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.9);vertical-align:middle;text-align:center;'><div style='color:white;font-size:32px;padding:200px'>このゲームは横向きで遊んで下さい</div></div>"
-        );
-
-      $(window).bind("load orientationchange", function () {
-
-        if (Math.abs(window.orientation) === 90) {
-
-          $(".rotage_alert").remove();
-
-        } else {
-
-          $("body").append(j_screen)
-
-        }
-
-      })
-
-    });
+  <script type="text/javascript">
+    2
+    window.onorientationchange = function () {
+      switch (window.orientation) {
+        case 0:
+          break;
+        case 90:
+          alert('画面を縦にしてくださいね');
+          break;
+        case -90:
+          alert('画面を縦にしてくださいね');
+          break;
+      }
+    }
   </script>
+
 </head>
 
 <body>
