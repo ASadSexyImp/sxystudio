@@ -9,11 +9,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"></script>
   <script type="text/javascript">
     window.onorientationchange = function () {
-      switch (window.orientation) {
-        case 0:
-          alert('rotate your phone');
-          break;
-      }
+      if (Math.abs(window.orientation) === 90) {
+        // 横向きになったときの処理
+        // $(横向き時に表示させる画像).show();
+    } else {
+        // 縦向きになったときの処理
+        // $(横向き時に表示させる画像).hide();
+        alert('rotate your phone');
+    }
     }
   </script>
 
