@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>sxy studio</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="style.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"></script>
-  </head>
 
-  <body>
-    <section>
-      <div class="glitch">
-        <div class="text">
-          <span>COMING SOON</span>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>sxy studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="style.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"></script>
+  <script>
+    $(function () {
+
+      var j_screen = $(
+        "<div class='rotage_alert' style='position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.9);vertical-align:middle;text-align:center;'><div style='color:white;font-size:32px;padding:200px'>このゲームは横向きで遊んで下さい</div></div>"
+        );
+
+      $(window).bind("load orientationchange", function () {
+
+        if (Math.abs(window.orientation) === 90) {
+
+          $(".rotage_alert").remove();
+
+        } else {
+
+          $("body").append(j_screen)
+
+        }
+
+      })
+
+    });
+  </script>
+</head>
+
+<body>
+  <section>
+    <div class="glitch">
+      <div class="text">
+        <span>COMING SOON</span>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+</body>
+
 </html>
